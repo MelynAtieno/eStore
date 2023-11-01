@@ -9,29 +9,37 @@
 <body>
     <iframe src="./navigation.html" title="navbar" frameborder="0" height="50"></iframe> <br>
     <h1>WHAT WOULD YOU LIKE TO SELL?</h1>
-    <div className="sellItemForm">
-        <Form>
-            <label><b>Category:</b></label><br>
-            <select id="category" name="category">
-                <option value="selecat">Choose a category</option>
-                <option value="toys">Toys</option>
-                <option value="clothes">Clothes</option>
+    <div className="itemForm">
+        <Form action="./clothes.html" method="POST" id="listItemForm">
+            <label><b>CATEGORY:</b></label><br>
+            <select id="category" name="category" required>
+                <option value="" disabled selected hidden>Choose a category</option>
+                <option value="Toys">Toys</option>
+                <option value="Clothes">Clothes</option>
             </select><br>
-            <label><b>Colour:</b></label> <br>
-            <input placeholder="Add a colour"> <br>
-            <label><b>Gender:</b></label><br>
-            <select id="gender" name="gender">
-                <option value="select">Select a gender</option>
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-                <option value="transgender">Transgender</option>
-                <option value="notsay">Prefer Not To Say</option>
+            <label><b>COLOUR:</b></label><br>
+            <input id="color" type="text"name=colour placeholder="Add a colour" required><br>
+            <label><b>GENDER:</b></label><br>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected hidden>Choose a gender</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Transgender">Transgender</option>
+                <option value="Unisex">Unisex</option>
             </select><br>
-            <label><b>Upload Image:</b></label> <br>
-            <input type="file" id="img" name="img" accept="image/*"><br><br>
+            <label><b>UPLOAD IMAGE:</b></label> <br>
+            <input type="file" id="img" name="img" accept="image/*" required><br>
+            <label><b>PRICE:</b></label><br>
+            <label><b>£</b></label> <input id="price" name="price" type="number" required><br><br>
 
             <button type="submit"><b>LIST ITEM</b></button>
+            
         </Form>
+        <button><a href="store.html"><b>CANCEL</b></a></button>
+        
     </div>
+    <script>
+
+    </script>
 </body>
 </html>
